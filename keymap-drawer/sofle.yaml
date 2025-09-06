@@ -55,14 +55,14 @@ layers:
   - LALT
   - LCTRL
   - lower
-  - RETURN
   - SPACE
+  - ENTER
   - raise
   - RCTRL
   - RALT
   - RGUI
   lower:
-  - {t: ▽, type: trans}
+  - ''
   - F1
   - F2
   - F3
@@ -74,7 +74,7 @@ layers:
   - F9
   - F10
   - F11
-  - {t: ▽, type: trans}
+  - ''
   - '~'
   - '|'
   - '{'
@@ -87,16 +87,16 @@ layers:
   - '-'
   - F12
   - {t: ▽, type: trans}
-  - '`'
-  - \
-  - '['
-  - ']'
+  - {t: '`', h: LEFT GUI}
+  - {t: \, h: LEFT ALT}
+  - {t: '[', h: LCTRL}
+  - {t: ']', h: LEFT SHIFT}
   - ''
   - +
-  - '4'
-  - '5'
-  - '6'
-  - _
+  - {t: '4', h: RIGHT SHIFT}
+  - {t: '5', h: RCTRL}
+  - {t: '6', h: RIGHT ALT}
+  - {t: _, h: RIGHT GUI}
   - ''
   - {t: ▽, type: trans}
   - ''
@@ -135,31 +135,31 @@ layers:
   - ''
   - ''
   - PRINTSCREEN
-  - {t: ▽, type: trans}
+  - ''
   - ''
   - ''
   - ''
   - ''
   - ''
   - PG UP
-  - ''
-  - UP
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - ''
-  - ''
   - HOME
+  - UP
   - END
-  - CLCK
+  - ''
+  - ''
+  - CAPSLOCK
+  - ''
+  - PREVIOUS
+  - PLAY PAUSE
+  - NEXT
+  - ''
   - PG DN
   - LEFT
   - DOWN
   - RIGHT
-  - DEL
-  - BSPC
-  - {t: ▽, type: trans}
+  - BACKSPACE
+  - DELETE
+  - ''
   - UNDO
   - CUT
   - COPY
