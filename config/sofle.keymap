@@ -71,7 +71,7 @@
 &kp TAB     &kp Q                 &kp W                 &kp E              &kp R                   &kp T                                  &kp Y      &kp U                     &kp I               &kp O                   &kp P                           &kp LEFT_BRACKET
 &kp ESCAPE  &left_hrm LEFT_WIN A  &left_hrm LEFT_ALT S  &left_hrm LCTRL D  &left_hrm LEFT_SHIFT F  &kp G                                  &kp H      &right_hrm RIGHT_SHIFT J  &right_hrm RCTRL K  &right_hrm RIGHT_ALT L  &right_hrm RIGHT_GUI SEMICOLON  &kp SQT
 &kp LSHFT   &kp Z                 &kp X                 &kp C              &kp V                   &kp B      &kp C_MUTE    &kp CAPSLOCK  &kp N      &kp M                     &kp COMMA           &kp DOT                 &kp FSLH                        &kp RSHFT
-                                  &kp LGUI              &kp LALT           &kp LCTRL               &mo LOWER  &kp SPACE     &kp ENTER     &mo RAISE  &kp RCTRL                 &kp RALT            &kp RGUI
+                                  &kp LGUI              &kp LALT           &kp LCTRL               &mo LOWER  &kp ENTER     &kp SPACE     &mo RAISE  &kp RCTRL                 &kp RALT            &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -89,10 +89,10 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none   &kp F1                    &kp F2                        &kp F3                        &kp F4                              &kp F5                    &kp F6     &kp F7                           &kp F8                     &kp F9                         &kp F10                          &kp F11
-&none   &kp TILDE                 &kp PIPE                      &kp LEFT_BRACE                &kp RIGHT_BRACE                     &none                     &kp EQUAL  &kp N7                           &kp N8                     &kp N9                         &kp MINUS                        &kp F12
-&trans  &left_hrm LEFT_GUI GRAVE  &left_hrm LEFT_ALT BACKSLASH  &left_hrm LCTRL LEFT_BRACKET  &left_hrm LEFT_SHIFT RIGHT_BRACKET  &none                     &kp PLUS   &right_hrm RIGHT_SHIFT NUMBER_4  &right_hrm RCTRL NUMBER_5  &right_hrm RIGHT_ALT NUMBER_6  &right_hrm RIGHT_GUI UNDERSCORE  &none
-&trans  &none                     &none                         &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS               &none   &trans    &trans  &none      &kp NUMBER_1                     &kp NUMBER_2               &kp NUMBER_3                   &none                            &trans
+&none   &kp F1                    &kp F2                        &kp F3                        &kp F4                              &kp F5                    &kp F6     &kp F7                           &kp F8                     &kp F9                         &kp F10                     &kp F11
+&none   &kp TILDE                 &kp PIPE                      &kp LEFT_BRACE                &kp RIGHT_BRACE                     &none                     &kp EQUAL  &kp N7                           &kp N8                     &kp N9                         &kp UNDERSCORE              &kp F12
+&trans  &left_hrm LEFT_GUI GRAVE  &left_hrm LEFT_ALT BACKSLASH  &left_hrm LCTRL LEFT_BRACKET  &left_hrm LEFT_SHIFT RIGHT_BRACKET  &none                     &kp PLUS   &right_hrm RIGHT_SHIFT NUMBER_4  &right_hrm RCTRL NUMBER_5  &right_hrm RIGHT_ALT NUMBER_6  &right_hrm RIGHT_GUI MINUS  &none
+&trans  &none                     &none                         &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS               &none   &trans    &trans  &none      &kp NUMBER_1                     &kp NUMBER_2               &kp NUMBER_3                   &none                       &trans
                                   &trans                        &trans                        &trans                              &trans  &trans    &trans  &trans     &kp NUMBER_0                     &trans                     &trans
             >;
 
