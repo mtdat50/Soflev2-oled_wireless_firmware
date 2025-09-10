@@ -55,8 +55,8 @@ layers:
   - LALT
   - LCTRL
   - lower
-  - SPACE
   - ENTER
+  - SPACE
   - raise
   - RCTRL
   - RALT
@@ -84,7 +84,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - '-'
+  - _
   - F12
   - {t: ▽, type: trans}
   - {t: '`', h: LEFT GUI}
@@ -96,7 +96,7 @@ layers:
   - {t: '4', h: RIGHT SHIFT}
   - {t: '5', h: RCTRL}
   - {t: '6', h: RIGHT ALT}
-  - {t: _, h: RIGHT GUI}
+  - {t: '-', h: RIGHT GUI}
   - ''
   - {t: ▽, type: trans}
   - ''
