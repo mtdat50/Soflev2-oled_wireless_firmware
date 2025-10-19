@@ -54,10 +54,10 @@ layers:
   - LGUI
   - LALT
   - LCTRL
-  - lower
+  - {t: TAB, h: lower}
   - {t: ENTER, h: functional}
   - {t: SPACE, h: RIGHT SHIFT}
-  - raise
+  - {t: ESCAPE, h: raise}
   - RCTRL
   - RALT
   - RGUI
@@ -145,7 +145,7 @@ layers:
   - HOME
   - UP
   - END
-  - ''
+  - DELETE
   - ''
   - ''
   - ''
@@ -157,20 +157,20 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
   - BACKSPACE
-  - DELETE
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -238,7 +238,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
