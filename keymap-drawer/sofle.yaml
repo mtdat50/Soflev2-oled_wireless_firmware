@@ -16,37 +16,37 @@ layers:
   - ''
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
   - ''
   - ''
   - {t: A, h: LEFT WIN}
-  - {t: S, h: LEFT ALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LEFT SHIFT}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: LCTRL}
+  - {t: T, h: LEFT SHIFT}
   - G
-  - H
-  - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: RIGHT ALT}
-  - {t: ;, h: RIGHT GUI}
+  - M
+  - {t: N, h: RIGHT SHIFT}
+  - {t: E, h: RCTRL}
+  - {t: I, h: RIGHT ALT}
+  - {t: O, h: RIGHT GUI}
   - ''
   - ''
   - Z
   - X
   - C
+  - D
   - V
-  - B
   - MUTE
   - ''
-  - N
-  - M
+  - K
+  - H
   - ','
   - .
   - /
@@ -106,11 +106,11 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
+  - '0'
   - '1'
   - '2'
   - '3'
-  - ''
+  - .
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -119,7 +119,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
