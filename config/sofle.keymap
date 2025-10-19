@@ -34,7 +34,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <200>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 21 10 11 23 22 34 35 49 48 33 47 59 58 46 32 19 20 30 18 31 45 44 43 55 56 57>;
         };
@@ -47,21 +47,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <200>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
-        };
-
-        hold_tap_layer: hold_tap_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_LAYER";
-            bindings = <&to>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            require-prior-idle-ms = <250>;
         };
     };
 
@@ -79,11 +67,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none  &kp N1                &kp N2                &kp N3             &kp N4                  &kp N5                                                           &kp N6  &kp N7                    &kp N8              &kp N9                  &kp N0                  &none
-&none  &kp Q                 &kp W                 &kp F              &kp P                   &kp B                                                            &kp J   &kp L                     &kp U               &kp Y                   &kp SEMI                &none
-&none  &left_hrm LEFT_WIN A  &left_hrm LEFT_ALT R  &left_hrm LCTRL S  &left_hrm LEFT_SHIFT T  &kp G                                                            &kp M   &right_hrm RIGHT_SHIFT N  &right_hrm RCTRL E  &right_hrm RIGHT_ALT I  &right_hrm RIGHT_GUI O  &none
-&none  &kp Z                 &kp X                 &kp C              &kp D                   &kp V   &kp C_MUTE                 &none                         &kp K   &kp H                     &kp COMMA           &kp DOT                 &kp FSLH                &none
-                             &kp LGUI              &kp LALT           &kp LCTRL               &mo 1   &hold_tap_layer 3 ENTER    &right_hrm RIGHT_SHIFT SPACE  &mo 2   &kp RCTRL                 &kp RALT            &kp RGUI
+&none  &kp N1                &kp N2                &kp N3             &kp N4                  &kp N5                                                  &kp N6        &kp N7                    &kp N8              &kp N9                  &kp N0                  &none
+&none  &kp Q                 &kp W                 &kp F              &kp P                   &kp B                                                   &kp J         &kp L                     &kp U               &kp Y                   &kp SEMI                &none
+&none  &left_hrm LEFT_WIN A  &left_hrm LEFT_ALT R  &left_hrm LCTRL S  &left_hrm LEFT_SHIFT T  &kp G                                                   &kp M         &right_hrm RIGHT_SHIFT N  &right_hrm RCTRL E  &right_hrm RIGHT_ALT I  &right_hrm RIGHT_GUI O  &none
+&none  &kp Z                 &kp X                 &kp C              &kp D                   &kp V      &kp C_MUTE     &none                         &kp K         &kp H                     &kp COMMA           &kp DOT                 &kp FSLH                &none
+                             &kp LGUI              &kp LALT           &kp LCTRL               &lt 1 TAB  &lt 3 ENTER    &right_hrm RIGHT_SHIFT SPACE  &lt 2 ESCAPE  &kp RCTRL                 &kp RALT            &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -122,11 +110,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&none  &none  &none   &none   &none   &none                     &none      &none     &none          &none       &none  &none
-&none  &none  &none   &none   &none   &none                     &kp PG_UP  &kp HOME  &kp UP         &kp END     &none  &none
-&none  &none  &none   &none   &none   &none                     &kp PG_DN  &kp LEFT  &kp DOWN       &kp RIGHT   &none  &none
-&none  &none  &none   &none   &none   &none   &trans    &trans  &none      &none     &kp BACKSPACE  &kp DELETE  &none  &trans
-              &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans         &trans
+&none  &none  &none   &none   &none   &none                     &none      &none     &none     &none      &none          &none
+&none  &none  &none   &none   &none   &none                     &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DELETE     &none
+&none  &none  &none   &none   &none   &none                     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &none
+&none  &none  &none   &none   &none   &none   &trans    &trans  &none      &none     &none     &none      &none          &trans
+              &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
