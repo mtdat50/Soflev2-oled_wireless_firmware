@@ -26,20 +26,20 @@ layers:
   - ;
   - ''
   - ''
-  - {t: X, h: LEFT WIN}
+  - {t: A, h: LEFT WIN}
   - {t: R, h: LEFT ALT}
   - {t: S, h: LCTRL}
   - {t: T, h: LEFT SHIFT}
   - G
   - M
-  - {t: N, h: RIGHT SHIFT}
+  - {t: O, h: RIGHT SHIFT}
   - {t: E, h: RCTRL}
   - {t: I, h: RIGHT ALT}
-  - {t: ., h: RIGHT GUI}
+  - {t: N, h: RIGHT GUI}
   - ''
   - ''
   - Z
-  - A
+  - X
   - C
   - D
   - V
@@ -48,7 +48,7 @@ layers:
   - K
   - H
   - ','
-  - O
+  - .
   - /
   - ''
   - ''
