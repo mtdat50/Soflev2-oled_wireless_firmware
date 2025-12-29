@@ -76,10 +76,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none  &kp N1                &kp N2                &kp N3             &kp N4                  &kp N5                                                  &kp N6        &kp N7                    &kp N8              &kp N9                  &kp N0                       &none
-&none  &kp Q                 &kp W                 &kp F              &kp P                   &kp B                                                   &kp J         &kp L                     &kp U               &kp Y                   &kp SEMI                     &none
-&none  &left_hrm LEFT_WIN X  &left_hrm LEFT_ALT R  &left_hrm LCTRL S  &left_hrm LEFT_SHIFT T  &kp G                                                   &kp M         &right_hrm RIGHT_SHIFT N  &right_hrm RCTRL E  &right_hrm RIGHT_ALT I  &right_hrm RIGHT_GUI PERIOD  &none
-&none  &kp Z                 &kp A                 &kp C              &kp D                   &kp V      &kp C_MUTE     &none                         &kp K         &kp H                     &kp COMMA           &kp O                   &kp SLASH                    &none
+&none  &kp N1                &kp N2                &kp N3             &kp N4                  &kp N5                                                  &kp N6        &kp N7                    &kp N8              &kp N9                  &kp N0                  &none
+&none  &kp Q                 &kp W                 &kp F              &kp P                   &kp B                                                   &kp J         &kp L                     &kp U               &kp Y                   &kp SEMI                &none
+&none  &left_hrm LEFT_WIN A  &left_hrm LEFT_ALT R  &left_hrm LCTRL S  &left_hrm LEFT_SHIFT T  &kp G                                                   &kp M         &right_hrm RIGHT_SHIFT O  &right_hrm RCTRL E  &right_hrm RIGHT_ALT I  &right_hrm RIGHT_GUI N  &none
+&none  &kp Z                 &kp X                 &kp C              &kp D                   &kp V      &kp C_MUTE     &none                         &kp K         &kp H                     &kp COMMA           &kp PERIOD              &kp SLASH               &none
                              &none                 &none              &none                   &lt 1 TAB  &lt 3 ENTER    &right_hrm RIGHT_SHIFT SPACE  &lt 2 ESCAPE  &bkspc_del_behavior       &none               &none
             >;
 
