@@ -26,7 +26,7 @@ layers:
   - ;
   - ''
   - ''
-  - {t: A, h: LEFT WIN}
+  - {t: X, h: LEFT WIN}
   - {t: R, h: LEFT ALT}
   - {t: S, h: LCTRL}
   - {t: T, h: LEFT SHIFT}
@@ -35,11 +35,11 @@ layers:
   - {t: N, h: RIGHT SHIFT}
   - {t: E, h: RCTRL}
   - {t: I, h: RIGHT ALT}
-  - {t: O, h: RIGHT GUI}
+  - {t: ., h: RIGHT GUI}
   - ''
   - ''
   - Z
-  - X
+  - A
   - C
   - D
   - V
@@ -48,19 +48,19 @@ layers:
   - K
   - H
   - ','
-  - .
+  - O
   - /
   - ''
-  - LGUI
-  - LALT
-  - LCTRL
+  - ''
+  - ''
+  - ''
   - {t: TAB, h: lower}
   - {t: ENTER, h: functional}
   - {t: SPACE, h: RIGHT SHIFT}
   - {t: ESCAPE, h: raise}
-  - RCTRL
-  - RALT
-  - RGUI
+  - {t: BACKSPACE, s: DELETE}
+  - ''
+  - ''
   lower:
   - ''
   - ''
@@ -100,17 +100,17 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - .
   - (
   - )
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
+  - '*'
   - '1'
   - '2'
   - '3'
-  - .
+  - /
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -136,11 +136,11 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '~'
+  - '|'
+  - '{'
+  - '}'
+  - '"'
   - PG UP
   - HOME
   - UP
@@ -148,22 +148,22 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: '`', h: LEFT GUI}
+  - {t: \, h: LEFT ALT}
+  - {t: '[', h: LCTRL}
+  - {t: ']', h: LEFT SHIFT}
+  - ''''
   - PG DN
   - LEFT
   - DOWN
   - RIGHT
-  - BACKSPACE
+  - BSPC
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
+  - .
+  - (
+  - )
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -171,8 +171,8 @@ layers:
   - ''
   - ''
   - ''
-  - DELETE
-  - {t: ▽, type: trans}
+  - DEL
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -180,7 +180,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   functional:
