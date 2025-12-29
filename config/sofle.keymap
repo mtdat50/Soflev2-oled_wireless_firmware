@@ -51,6 +51,15 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
         };
+
+        bkspc_del_behavior: bkspc_del_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKSPC_DEL_BEHAVIOR";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -67,11 +76,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none  &kp N1                &kp N2                &kp N3             &kp N4                  &kp N5                                                  &kp N6        &kp N7                    &kp N8              &kp N9                  &kp N0                  &none
-&none  &kp Q                 &kp W                 &kp F              &kp P                   &kp B                                                   &kp J         &kp L                     &kp U               &kp Y                   &kp SEMI                &none
-&none  &left_hrm LEFT_WIN A  &left_hrm LEFT_ALT R  &left_hrm LCTRL S  &left_hrm LEFT_SHIFT T  &kp G                                                   &kp M         &right_hrm RIGHT_SHIFT N  &right_hrm RCTRL E  &right_hrm RIGHT_ALT I  &right_hrm RIGHT_GUI O  &none
-&none  &kp Z                 &kp X                 &kp C              &kp D                   &kp V      &kp C_MUTE     &none                         &kp K         &kp H                     &kp COMMA           &kp DOT                 &kp FSLH                &none
-                             &kp LGUI              &kp LALT           &kp LCTRL               &lt 1 TAB  &lt 3 ENTER    &right_hrm RIGHT_SHIFT SPACE  &lt 2 ESCAPE  &kp RCTRL                 &kp RALT            &kp RGUI
+&none  &kp N1                &kp N2                &kp N3             &kp N4                  &kp N5                                                  &kp N6        &kp N7                    &kp N8              &kp N9                  &kp N0                       &none
+&none  &kp Q                 &kp W                 &kp F              &kp P                   &kp B                                                   &kp J         &kp L                     &kp U               &kp Y                   &kp SEMI                     &none
+&none  &left_hrm LEFT_WIN X  &left_hrm LEFT_ALT R  &left_hrm LCTRL S  &left_hrm LEFT_SHIFT T  &kp G                                                   &kp M         &right_hrm RIGHT_SHIFT N  &right_hrm RCTRL E  &right_hrm RIGHT_ALT I  &right_hrm RIGHT_GUI PERIOD  &none
+&none  &kp Z                 &kp A                 &kp C              &kp D                   &kp V      &kp C_MUTE     &none                         &kp K         &kp H                     &kp COMMA           &kp O                   &kp SLASH                    &none
+                             &none                 &none              &none                   &lt 1 TAB  &lt 3 ENTER    &right_hrm RIGHT_SHIFT SPACE  &lt 2 ESCAPE  &bkspc_del_behavior       &none               &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -89,11 +98,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none  &none                     &none                         &none                         &none                               &none                      &none      &none                            &none                      &none                          &none                       &none
-&none  &kp TILDE                 &kp PIPE                      &kp LEFT_BRACE                &kp RIGHT_BRACE                     &kp DQT                    &kp EQUAL  &kp N7                           &kp N8                     &kp N9                         &kp UNDERSCORE              &none
-&none  &left_hrm LEFT_GUI GRAVE  &left_hrm LEFT_ALT BACKSLASH  &left_hrm LCTRL LEFT_BRACKET  &left_hrm LEFT_SHIFT RIGHT_BRACKET  &kp SQT                    &kp PLUS   &right_hrm RIGHT_SHIFT NUMBER_4  &right_hrm RCTRL NUMBER_5  &right_hrm RIGHT_ALT NUMBER_6  &right_hrm RIGHT_GUI MINUS  &none
-&none  &none                     &none                         &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS               &none    &trans    &trans  &none      &kp NUMBER_1                     &kp NUMBER_2               &kp NUMBER_3                   &kp PERIOD                  &none
-                                 &trans                        &trans                        &trans                              &trans   &trans    &trans  &trans     &kp NUMBER_0                     &trans                     &trans
+&none  &none                     &none                         &none                         &none                               &none                      &none         &none                            &none                      &none                          &none                       &none
+&none  &kp TILDE                 &kp PIPE                      &kp LEFT_BRACE                &kp RIGHT_BRACE                     &kp DQT                    &kp EQUAL     &kp N7                           &kp N8                     &kp N9                         &kp UNDERSCORE              &none
+&none  &left_hrm LEFT_GUI GRAVE  &left_hrm LEFT_ALT BACKSLASH  &left_hrm LCTRL LEFT_BRACKET  &left_hrm LEFT_SHIFT RIGHT_BRACKET  &kp SQT                    &kp PLUS      &right_hrm RIGHT_SHIFT NUMBER_4  &right_hrm RCTRL NUMBER_5  &right_hrm RIGHT_ALT NUMBER_6  &right_hrm RIGHT_GUI MINUS  &none
+&none  &none                     &kp PERIOD                    &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS               &none    &trans    &trans  &kp ASTERISK  &kp NUMBER_1                     &kp NUMBER_2               &kp NUMBER_3                   &kp SLASH                   &none
+                                 &trans                        &trans                        &trans                              &trans   &trans    &trans  &trans        &kp NUMBER_0                     &trans                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -101,23 +110,17 @@
 
         raise_layer {
             label = "raise";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-            // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //                |      |       |       |      |      |  |      |      |      |       |      |
-
             bindings = <
-&none  &none  &none   &none   &none   &none                     &none      &none     &none     &none      &none          &none
-&none  &none  &none   &none   &none   &none                     &kp PG_UP  &kp HOME  &kp UP    &kp END    &none          &none
-&none  &none  &none   &none   &none   &none                     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &none
-&none  &none  &none   &none   &none   &none   &trans    &trans  &none      &none     &none     &none      &kp DELETE     &trans
-              &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans    &trans
+&none  &none                     &none                         &none                         &none                               &none                      &none      &none     &none     &none      &none     &none
+&none  &kp TILDE                 &kp PIPE                      &kp LEFT_BRACE                &kp RIGHT_BRACE                     &kp DQT                    &kp PG_UP  &kp HOME  &kp UP    &kp END    &none     &none
+&none  &left_hrm LEFT_GUI GRAVE  &left_hrm LEFT_ALT BACKSLASH  &left_hrm LCTRL LEFT_BRACKET  &left_hrm LEFT_SHIFT RIGHT_BRACKET  &kp SQT                    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BSPC  &none
+&none  &none                     &kp PERIOD                    &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS               &none    &trans    &trans  &none      &none     &none     &none      &kp DEL   &none
+                                 &trans                        &trans                        &trans                              &trans   &trans    &trans  &trans     &none     &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         functional {
