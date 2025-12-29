@@ -32,10 +32,10 @@ layers:
   - {t: T, h: LEFT SHIFT}
   - G
   - M
-  - {t: O, h: RIGHT SHIFT}
+  - {t: N, h: RIGHT SHIFT}
   - {t: E, h: RCTRL}
-  - {t: I, h: RIGHT ALT}
-  - {t: N, h: RIGHT GUI}
+  - {t: O, h: RIGHT ALT}
+  - {t: I, h: RIGHT GUI}
   - ''
   - ''
   - Z
